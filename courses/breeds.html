@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Breed-Specific Training | Dog Training Online</title>
+  <meta name="description" content="Specialized training courses for specific dog breeds. Beagle, German Shepherd, Rottweiler, Golden Retriever, and more.">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <style>
+    .course-hero { min-height: 60vh; display: flex; align-items: center; padding: 10rem 2rem 4rem; background: linear-gradient(135deg, var(--black), var(--gray)); }
+    .course-hero-content { max-width: 700px; }
+    .course-hero h1 { font-size: clamp(2rem, 5vw, 3.5rem); margin-bottom: 1rem; }
+    .breed-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; margin-top: 3rem; }
+    .breed-card { background: var(--gray); border-radius: 20px; padding: 2.5rem; border: 1px solid rgba(212,175,55,0.1); transition: all 0.3s ease; }
+    .breed-card:hover { transform: translateY(-5px); border-color: rgba(212,175,55,0.3); }
+    .breed-card h3 { color: var(--gold); margin-bottom: 1rem; font-size: 1.4rem; }
+    .breed-card p { color: var(--silver); margin-bottom: 1.5rem; font-size: 0.95rem; }
+    .breed-tags { display: flex; gap: 0.5rem; flex-wrap: wrap; margin-bottom: 1.5rem; }
+    .breed-tags span { font-size: 0.75rem; padding: 0.3rem 0.7rem; border-radius: 15px; background: var(--gray-light); color: var(--gold); }
+    .coming-soon { opacity: 0.6; }
+    .coming-soon::after { content: ' (Coming Soon)'; color: var(--silver); font-size: 0.85rem; }
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="../index.html" class="logo">🐾 Dog Training Online</a>
+      <div class="nav-links">
+        <a href="../index.html">Home</a>
+        <a href="../courses.html">Courses</a>
+        <a href="../about.html">About</a>
+        <a href="../contact.html">Contact</a>
+      </div>
+        <button id="theme-toggle" class="theme-toggle" title="Toggle theme">☀️</button>
+    </nav>
+  </header>
+
+  <main>
+    <section class="course-hero">
+      <div class="course-hero-content">
+        <h1>🏆 Breed-Specific <span class="gold">Training</span></h1>
+        <p class="hero-subtitle">Each breed has unique instincts, drives, and challenges. Our specialized courses teach you how to work with your breed's specific needs.</p>
+      </div>
+    </section>
+
+    <section>
+      <h2 class="section-title">Available <span class="gold">Now</span></h2>
+      <div class="breed-grid">
+        <div class="breed-card">
+          <h3>🐕 Beagle</h3>
+          <p>The nose-driven hunter. Learn to manage scent-driven behavior, recall challenges, and channel that incredible nose productively.</p>
+          <div class="breed-tags"><span>Scent Work</span><span>Recall</span><span>Prey Drive</span></div>
+          <a href="#" class="course-link">Learn More →</a>
+        </div>
+        <div class="breed-card">
+          <h3>🐺 German Shepherd</h3>
+          <p>The ultimate working dog. Structure, protection instincts, and mental stimulation for this intelligent, loyal breed.</p>
+          <div class="breed-tags"><span>Protection</span><span>Obedience</span><span>Drive</span></div>
+          <a href="#" class="course-link">Learn More →</a>
+        </div>
+        <div class="breed-card">
+          <h3>🦮 Golden Retriever</h3>
+          <p>America's sweetheart. Managing enthusiasm, retrieving instincts, and keeping their gentle nature balanced with structure.</p>
+          <div class="breed-tags"><span>Family Dog</span><span>Retrieving</span><span>Enthusiasm</span></div>
+          <a href="#" class="course-link">Learn More →</a>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2 class="section-title">Coming <span class="gold">Soon</span></h2>
+      <div class="breed-grid">
+        <div class="breed-card coming-soon">
+          <h3>🐕‍🦺 Rottweiler</h3>
+          <p>Power, loyalty, and guarding instincts. Channeling protective nature into confident, calm behavior.</p>
+          <div class="breed-tags"><span>Guarding</span><span>Confidence</span><span>Socialization</span></div>
+        </div>
+        <div class="breed-card coming-soon">
+          <h3>🐩 Poodle</h3>
+          <p>The brilliant clown. Mental stimulation, retrieving games, and managing that legendary intelligence.</p>
+          <div class="breed-tags"><span>Intelligence</span><span>Agility</span><span>Family</span></div>
+        </div>
+        <div class="breed-card coming-soon">
+          <h3>🐕 Husky</h3>
+          <p>The escape artist. Recall, containment, and channeling that incredible energy into productive activities.</p>
+          <div class="breed-tags"><span>Escape</span><span>Energy</span><span>Pack Dynamics</span></div>
+        </div>
+        <div class="breed-card coming-soon">
+          <h3>🐕 Border Collie</h3>
+          <p>The workaholic. Herding instincts, obsessive behaviors, and keeping their brilliant minds occupied.</p>
+          <div class="breed-tags"><span>Herding</span><span>Obsession</span><span>Mental Work</span></div>
+        </div>
+        <div class="breed-card coming-soon">
+          <h3>🐕 Labrador</h3>
+          <p>The food-motivated athlete. Managing weight, recall, and that never-ending appetite for life.</p>
+          <div class="breed-tags"><span>Food</span><span>Energy</span><span>Swimming</span></div>
+        </div>
+        <div class="breed-card coming-soon">
+          <h3>🐕 French Bulldog</h3>
+          <p>The stubborn charmer. Patience-based training for this independent, lovable breed.</p>
+          <div class="breed-tags"><span>Stubborn</span><span>Health</span><span>Social</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-section">
+      <h2 class="section-title">Don't See Your Breed?</h2>
+      <p class="section-subtitle">We're adding new breed-specific courses every month. Let us know which breed you want next.</p>
+      <a href="../contact.html" class="btn btn-primary">Request a Breed</a>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-content">
+      <div class="footer-section"><h4>Courses</h4><a href="kids.html">Dogs for Kids</a><a href="puppy.html">Puppy Raising</a><a href="adoption.html">Adoption Guide</a><a href="positive.html">Positive Training</a><a href="balanced.html">Balanced Training</a></div>
+      <div class="footer-section"><h4>About</h4><a href="../about.html">Our Story</a></div>
+      <div class="footer-section"><h4>Contact</h4><a href="../contact.html">Support</a></div>
+      <div class="footer-section"><h4>Legal</h4><a href="#">Privacy Policy</a></div>
+    </div>
+    <div class="footer-bottom">© 2026 Dog Training Online. All rights reserved.</div>
+  </footer>
+
+  <script src="../assets/js/i18n.js"></script>
+  <script src="../assets/js/theme.js"></script>
+</body>
+</html>

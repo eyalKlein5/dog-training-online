@@ -1,293 +1,212 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="he" dir="rtl">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Professional Dog Training Course | Dog Training Online</title>
-  <meta name="description" content="Master professional dog training from home. Expert-led online courses for obedience, behavior, and puppy training. Enroll today.">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <style>
-    :root {
-      --primary: #1a1a2e;
-      --accent: #e8b923;
-      --accent-hover: #d4a91f;
-      --bg: #0f0f1a;
-      --card: #1a1a2e;
-      --text: #f0f0f5;
-      --text-muted: #a0a0b0;
-      --border: #2a2a3e;
-    }
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body {
-      font-family: 'Inter', -apple-system, sans-serif;
-      background: var(--bg);
-      color: var(--text);
-      line-height: 1.6;
-    }
-    .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
-    /* Nav */
-    nav {
-      position: fixed; top: 0; left: 0; right: 0;
-      background: rgba(15,15,26,0.9);
-      backdrop-filter: blur(20px);
-      border-bottom: 1px solid var(--border);
-      z-index: 1000;
-      padding: 16px 0;
-    }
-    nav .container { display: flex; justify-content: space-between; align-items: center; }
-    .logo { font-size: 22px; font-weight: 800; color: var(--accent); letter-spacing: -0.5px; }
-    .logo span { color: var(--text); }
-    .nav-links { display: flex; gap: 32px; list-style: none; }
-    .nav-links a { color: var(--text-muted); text-decoration: none; font-weight: 500; transition: color 0.2s; }
-    .nav-links a:hover { color: var(--text); }
-    .btn {
-      display: inline-block; padding: 12px 28px;
-      background: var(--accent); color: var(--primary);
-      font-weight: 700; border-radius: 8px; text-decoration: none;
-      transition: all 0.2s; border: none; cursor: pointer; font-size: 16px;
-    }
-    .btn:hover { background: var(--accent-hover); transform: translateY(-1px); }
-    .btn-outline {
-      background: transparent; color: var(--accent);
-      border: 2px solid var(--accent);
-    }
-    .btn-outline:hover { background: var(--accent); color: var(--primary); }
-    /* Hero */
-    .hero {
-      padding: 160px 0 100px;
-      text-align: center;
-      position: relative;
-      overflow: hidden;
-    }
-    .hero::before {
-      content: ''; position: absolute; top: -50%; left: -50%;
-      width: 200%; height: 200%;
-      background: radial-gradient(circle at 50% 50%, rgba(232,185,35,0.08) 0%, transparent 50%);
-      pointer-events: none;
-    }
-    .hero h1 {
-      font-size: 56px; font-weight: 800; line-height: 1.1;
-      margin-bottom: 24px; letter-spacing: -1.5px;
-    }
-    .hero h1 .highlight { color: var(--accent); }
-    .hero p {
-      font-size: 20px; color: var(--text-muted);
-      max-width: 600px; margin: 0 auto 40px;
-    }
-    .hero-btns { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
-    .hero-badge {
-      display: inline-flex; align-items: center; gap: 8px;
-      background: rgba(232,185,35,0.1); color: var(--accent);
-      padding: 8px 16px; border-radius: 100px; font-size: 14px; font-weight: 500;
-      margin-bottom: 32px; border: 1px solid rgba(232,185,35,0.2);
-    }
-    /* Features */
-    .features { padding: 80px 0; }
-    .section-title {
-      text-align: center; font-size: 36px; font-weight: 700;
-      margin-bottom: 16px;
-    }
-    .section-subtitle {
-      text-align: center; color: var(--text-muted);
-      font-size: 18px; margin-bottom: 64px;
-    }
-    .features-grid {
-      display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 24px;
-    }
-    .feature-card {
-      background: var(--card); border: 1px solid var(--border);
-      border-radius: 16px; padding: 32px;
-      transition: all 0.3s;
-    }
-    .feature-card:hover {
-      border-color: rgba(232,185,35,0.3);
-      transform: translateY(-4px);
-    }
-    .feature-icon {
-      width: 48px; height: 48px; border-radius: 12px;
-      background: rgba(232,185,35,0.1); color: var(--accent);
-      display: flex; align-items: center; justify-content: center;
-      font-size: 24px; margin-bottom: 20px;
-    }
-    .feature-card h3 { font-size: 20px; font-weight: 700; margin-bottom: 12px; }
-    .feature-card p { color: var(--text-muted); font-size: 15px; }
-    /* Courses */
-    .courses { padding: 80px 0; background: rgba(26,26,46,0.3); }
-    .courses-grid {
-      display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-      gap: 24px;
-    }
-    .course-card {
-      background: var(--card); border: 1px solid var(--border);
-      border-radius: 20px; overflow: hidden;
-      transition: all 0.3s;
-    }
-    .course-card:hover { border-color: var(--accent); transform: translateY(-4px); }
-    .course-img {
-      height: 200px; background: linear-gradient(135deg, #1a1a2e 0%, #2a2a4e 100%);
-      display: flex; align-items: center; justify-content: center;
-      font-size: 64px;
-    }
-    .course-body { padding: 28px; }
-    .course-tag {
-      display: inline-block; background: rgba(232,185,35,0.1);
-      color: var(--accent); padding: 4px 12px; border-radius: 6px;
-      font-size: 12px; font-weight: 600; text-transform: uppercase;
-      margin-bottom: 12px;
-    }
-    .course-body h3 { font-size: 22px; font-weight: 700; margin-bottom: 8px; }
-    .course-body p { color: var(--text-muted); font-size: 15px; margin-bottom: 20px; }
-    .course-meta { display: flex; gap: 20px; color: var(--text-muted); font-size: 14px; }
-    /* CTA */
-    .cta {
-      padding: 100px 0; text-align: center;
-      background: linear-gradient(180deg, transparent 0%, rgba(232,185,35,0.05) 100%);
-    }
-    .cta h2 { font-size: 42px; font-weight: 800; margin-bottom: 20px; }
-    .cta p { font-size: 18px; color: var(--text-muted); max-width: 500px; margin: 0 auto 32px; }
-    /* Footer */
-    footer {
-      padding: 40px 0; border-top: 1px solid var(--border);
-      text-align: center; color: var(--text-muted); font-size: 14px;
-    }
-    /* Responsive */
-    @media (max-width: 768px) {
-      .hero h1 { font-size: 36px; }
-      .hero p { font-size: 17px; }
-      .section-title { font-size: 28px; }
-      .nav-links { display: none; }
-      .hero-btns { flex-direction: column; align-items: center; }
-      .btn { width: 100%; max-width: 300px; text-align: center; }
-    }
-  </style>
+  <title>Dog Training Online | Learn to Speak Dog</title>
+  <meta name="description" content="Professional online dog training courses. From puppies to breed-specific training. Positive-only and balanced approaches.">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🐾</text></svg>">
 </head>
 <body>
+  <header>
+    <nav>
+      <a href="index.html" class="logo">🐾 Dog Training Online</a>
+      <div class="nav-links">
+        <a href="index.html" data-i18n="nav_home">Home</a>
+        <a href="courses.html" data-i18n="nav_courses">Courses</a>
+        <a href="about.html" data-i18n="nav_about">About</a>
+        <a href="contact.html" data-i18n="nav_contact">Contact</a>
+        <div class="language-switcher">
+          <select id="lang-select">
+            <option value="he">עברית</option>
+            <option value="en">English</option>
+            <option value="es">Español</option>
+            <option value="fr">Français</option>
+            <option value="de">Deutsch</option>
+            <option value="ja">日本語</option>
+            <option value="zh">中文</option>
+          </select>
+        </div>
+        <button id="theme-toggle" class="theme-toggle" title="Toggle theme">">☀️</button>
+      </div>
+    </nav>
+  </header>
 
-<nav>
-  <div class="container">
-    <div class="logo">Dog<span>Training</span>.online</div>
-    <ul class="nav-links">
-      <li><a href="#courses">Courses</a></li>
-      <li><a href="#features">Why Us</a></li>
-      <li><a href="#about">About</a></li>
-    </ul>
-    <a href="#courses" class="btn">Get Started</a>
-  </div>
-</nav>
-
-<section class="hero">
-  <div class="container">
-    <div class="hero-badge">
-      <span>⭐</span> Trusted by 2,000+ students worldwide
-    </div>
-    <h1>Become a <span class="highlight">Professional</span><br>Dog Trainer</h1>
-    <p>Master the art and science of dog training from the comfort of your home. Expert-led courses designed for real-world results.</p>
-    <div class="hero-btns">
-      <a href="#courses" class="btn">Explore Courses</a>
-      <a href="#about" class="btn btn-outline">Learn More</a>
-    </div>
-  </div>
-</section>
-
-<section class="features" id="features">
-  <div class="container">
-    <h2 class="section-title">Why Train With Us?</h2>
-    <p class="section-subtitle">Everything you need to build a rewarding career in dog training</p>
-    <div class="features-grid">
-      <div class="feature-card">
-        <div class="feature-icon">📹</div>
-        <h3>HD Video Lessons</h3>
-        <p>Crystal-clear instruction with multiple camera angles, slow-motion replays, and downloadable resources.</p>
-      </div>
-      <div class="feature-card">
-        <div class="feature-icon">🎓</div>
-        <h3>Certified Curriculum</h3>
-        <p>Industry-recognized certification upon completion. Add credentials to your resume or business.</p>
-      </div>
-      <div class="feature-card">
-        <div class="feature-icon">🐕</div>
-        <h3>Real Case Studies</h3>
-        <p>Learn from actual behavioral cases — aggression, anxiety, leash reactivity, and more.</p>
-      </div>
-      <div class="feature-card">
-        <div class="feature-icon">💬</div>
-        <h3>Community Access</h3>
-        <p>Join a global community of trainers. Share experiences, get feedback, and grow together.</p>
-      </div>
-      <div class="feature-card">
-        <div class="feature-icon">📱</div>
-        <h3>Learn Anywhere</h3>
-        <p>Full mobile support. Study on your commute, at the park, or between training sessions.</p>
-      </div>
-      <div class="feature-card">
-        <div class="feature-icon">🔄</div>
-        <h3>Lifetime Access</h3>
-        <p>Buy once, keep forever. Including all future updates and bonus content.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="courses" id="courses">
-  <div class="container">
-    <h2 class="section-title">Our Courses</h2>
-    <p class="section-subtitle">From beginner fundamentals to advanced behavior modification</p>
-    <div class="courses-grid">
-      <div class="course-card">
-        <div class="course-img">🐾</div>
-        <div class="course-body">
-          <span class="course-tag">Beginner</span>
-          <h3>Foundation Training</h3>
-          <p>Build the essential skills every dog trainer needs. Commands, leash manners, and positive reinforcement basics.</p>
-          <div class="course-meta">
-            <span>📅 6 weeks</span>
-            <span>🎥 24 lessons</span>
-          </div>
+  <main>
+    <section class="hero">
+      <div class="hero-content">
+        <h1 data-i18n-html="hero_title"><span class="gold">Dog</span></h1>
+        <p class="hero-subtitle" data-i18n="hero_subtitle">Professional courses for raising, training, and understanding dogs — from puppies to seniors. For kids, adults, and every dog lover.</p>
+        <div class="hero-cta">
+          <a href="courses.html" class="btn btn-primary" data-i18n="hero_cta_primary">Browse Courses</a>
+          <a href="#how" class="btn btn-secondary" data-i18n="hero_cta_secondary">Learn More</a>
         </div>
       </div>
-      <div class="course-card">
-        <div class="course-img">🧠</div>
-        <div class="course-body">
-          <span class="course-tag">Intermediate</span>
-          <h3>Behavioral Psychology</h3>
-          <p>Understand what drives dog behavior. Learn to read body language, identify triggers, and apply science-backed methods.</p>
+    </section>
+
+    <section id="courses">
+      <h2 class="section-title" data-i18n-html="courses_title"><span class="gold">Our Courses</span></h2>
+      <p class="section-subtitle" data-i18n="courses_subtitle">Choose the right path for you — from foundational courses to breed-specific training.</p>
+      <div class="courses-grid">
+        <div class="course-card">
+          <div class="course-icon">🎡</div>
+          <h3 data-i18n="course_kids_title">Dogs for Kids</h3>
+          <p data-i18n="course_kids_desc">A unique animation course for children — learn to see the dog, understand their language, and be empathetic.</p>
           <div class="course-meta">
-            <span>📅 8 weeks</span>
-            <span>🎥 32 lessons</span>
+            <span data-i18n="course_kids_tag1">Animation</span>
+            <span data-i18n="course_kids_tag2">Ages 6-14</span>
           </div>
+          <a href="courses/kids.html" class="course-link">Learn More →</a>
+        </div>
+
+        <div class="course-card">
+          <div class="course-icon">🐶</div>
+          <h3 data-i18n="course_puppy_title">Puppy Raising: 0-12 Months</h3>
+          <p data-i18n="course_puppy_desc">From the first night to one year old — grooming, basic obedience, behavioral solutions, and building correct foundations.</p>
+          <div class="course-meta">
+            <span data-i18n="course_puppy_tag1">16 Lessons</span>
+            <span data-i18n="course_puppy_tag2">For New Owners</span>
+          </div>
+          <a href="courses/puppy.html" class="course-link">Learn More →</a>
+        </div>
+
+        <div class="course-card">
+          <div class="course-icon">🏠</div>
+          <h3 data-i18n="course_adoption_title">How to Adopt the Right Dog</h3>
+          <p data-i18n="course_adoption_desc">Complete guide — how to choose a dog for adoption, how to prepare, and the most important first steps.</p>
+          <div class="course-meta">
+            <span data-i18n="course_adoption_tag1">Free Guide</span>
+            <span data-i18n="course_adoption_tag2">PDF + Video</span>
+          </div>
+          <a href="courses/adoption.html" class="course-link">Learn More →</a>
+        </div>
+
+        <div class="course-card">
+          <div class="course-icon">❤️</div>
+          <h3 data-i18n="course_positive_title">Positive-Only Training</h3>
+          <p data-i18n="course_positive_desc">The modern approach — no force, no punishment. Reward-based training that builds trust and connection.</p>
+          <div class="course-meta">
+            <span data-i18n="course_positive_tag1">Certified Trainer</span>
+            <span data-i18n="course_positive_tag2">Science-Based</span>
+          </div>
+          <a href="courses/positive.html" class="course-link">Learn More →</a>
+        </div>
+
+        <div class="course-card">
+          <div class="course-icon">⚖️</div>
+          <h3 data-i18n="course_balanced_title">Balanced Training — Classic</h3>
+          <p data-i18n="course_balanced_desc">Experience-based approach with 20+ years — combining positive reinforcement with clear boundaries.</p>
+          <div class="course-meta">
+            <span data-i18n="course_balanced_tag1">20+ Years Experience</span>
+            <span data-i18n="course_balanced_tag2">For Difficult Dogs</span>
+          </div>
+          <a href="courses/balanced.html" class="course-link">Learn More →</a>
+        </div>
+
+        <div class="course-card">
+          <div class="course-icon">🏆</div>
+          <h3 data-i18n="course_breeds_title">Breed-Specific Training</h3>
+          <p data-i18n="course_breeds_desc">Specialized courses for specific breeds — Beagle, German Shepherd, Rottweiler, Golden Retriever, and more.</p>
+          <div class="course-meta">
+            <span data-i18n="course_breeds_tag1">Beagle</span>
+            <span data-i18n="course_breeds_tag2">German Shepherd</span>
+          </div>
+          <a href="courses/breeds.html" class="course-link">Learn More →</a>
         </div>
       </div>
-      <div class="course-card">
-        <div class="course-img">⚡</div>
-        <div class="course-body">
-          <span class="course-tag">Advanced</span>
-          <h3>Problem Behavior Mastery</h3>
-          <p>Tackle the toughest cases: aggression, fear, separation anxiety, and reactivity. Advanced protocols that work.</p>
-          <div class="course-meta">
-            <span>📅 10 weeks</span>
-            <span>🎥 40 lessons</span>
-          </div>
+    </section>
+
+    <section id="features">
+      <h2 class="section-title" data-i18n-html="features_title"><span class="gold">Why Learn With Us?</span></h2>
+      <div class="features-grid">
+        <div class="feature">
+          <div class="feature-icon">🎬</div>
+          <h3 data-i18n="feature_1_title">Visual Learning</h3>
+          <p data-i18n="feature_1_desc">Animated videos, interactive simulations, and hands-on exercises — not just theory.</p>
         </div>
+        <div class="feature">
+          <div class="feature-icon">🎓</div>
+          <h3 data-i18n="feature_2_title">Expert Trainers</h3>
+          <p data-i18n="feature_2_desc">Two certified paths — a positive-only trainer and a classic trainer with 20+ years experience.</p>
+        </div>
+        <div class="feature">
+          <div class="feature-icon">⏱️</div>
+          <h3 data-i18n="feature_3_title">At Your Own Pace</h3>
+          <p data-i18n="feature_3_desc">Lifetime access. Learn when it suits you, from any device, anywhere in the world.</p>
+        </div>
+        <div class="feature">
+          <div class="feature-icon">✅</div>
+          <h3 data-i18n="feature_4_title">Real Results</h3>
+          <p data-i18n="feature_4_desc">Thousands of graduates who built a strong connection with their dogs — our best recommendation.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="how">
+      <h2 class="section-title" data-i18n-html="how_title"><span class="gold">How It Works?</span></h2>
+      <div class="steps">
+        <div class="step">
+          <div class="step-number">1</div>
+          <h3 data-i18n="step_1_title">Choose a Course</h3>
+          <p data-i18n="step_1_desc">Browse the catalog and find the path that suits you and your dog.</p>
+        </div>
+        <div class="step">
+          <div class="step-number">2</div>
+          <h3 data-i18n="step_2_title">Sign Up & Start</h3>
+          <p data-i18n="step_2_desc">Secure payment via credit card or PayPal. Instant access.</p>
+        </div>
+        <div class="step">
+          <div class="step-number">3</div>
+          <h3 data-i18n="step_3_title">Learn & Practice</h3>
+          <p data-i18n="step_3_desc">Watch lessons, practice with your dog, and track your progress.</p>
+        </div>
+        <div class="step">
+          <div class="step-number">4</div>
+          <h3 data-i18n="step_4_title">Get Support</h3>
+          <p data-i18n="step_4_desc">Chat with our trainers and get personal feedback on your exercises.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-section">
+      <h2 class="section-title" data-i18n="cta_title">Ready to Start?</h2>
+      <p class="section-subtitle" data-i18n="cta_subtitle">Join thousands of dog lovers who learned to speak dog. Your first lesson awaits.</p>
+      <a href="courses.html" class="btn btn-primary" data-i18n="cta_button">Start Now</a>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-content">
+      <div class="footer-section">
+        <h4 data-i18n="footer_courses">Courses</h4>
+        <a href="courses/kids.html">Dogs for Kids</a>
+        <a href="courses/puppy.html">Puppy Raising</a>
+        <a href="courses/adoption.html">Adoption Guide</a>
+        <a href="courses/positive.html">Positive Training</a>
+        <a href="courses/balanced.html">Balanced Training</a>
+      </div>
+      <div class="footer-section">
+        <h4 data-i18n="footer_about">About</h4>
+        <a href="about.html">Our Story</a>
+        <a href="about.html#trainers">Trainers</a>
+        <a href="about.html#method">Our Method</a>
+      </div>
+      <div class="footer-section">
+        <h4 data-i18n="footer_contact">Contact</h4>
+        <a href="contact.html">Support</a>
+        <a href="contact.html">Business Inquiries</a>
+      </div>
+      <div class="footer-section">
+        <h4 data-i18n="footer_legal">Legal</h4>
+        <a href="#" data-i18n="footer_privacy">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
       </div>
     </div>
-  </div>
-</section>
+    <div class="footer-bottom" data-i18n="footer_copy">© 2026 Dog Training Online. All rights reserved.</div>
+  </footer>
 
-<section class="cta" id="about">
-  <div class="container">
-    <h2>Ready to Start Your Journey?</h2>
-    <p>Join thousands of aspiring trainers who have turned their passion into a profession. Your first lesson is free.</p>
-    <a href="#courses" class="btn" style="font-size: 18px; padding: 16px 40px;">Start Free Trial</a>
-  </div>
-</section>
-
-<footer>
-  <div class="container">
-    <p> Dog Training Online. All rights reserved. | Professional dog training education for the modern world.</p>
-  </div>
-</footer>
-
+  <script src="assets/js/i18n.js"></script>
+  <script src="assets/js/theme.js"></script>
 </body>
 </html>
