@@ -1,5 +1,5 @@
 const Theme = {
-  current: localStorage.getItem('theme') || 'dark',
+  current: localStorage.getItem('theme') || 'light',
 
   init() {
     this.apply(this.current);

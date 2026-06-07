@@ -1,5 +1,5 @@
 const I18N = {
-  currentLang: localStorage.getItem('lang') || 'he',
+  currentLang: localStorage.getItem('lang') || 'en',
   
   translations: {},
   
