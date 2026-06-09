@@ -40,6 +40,51 @@
   <!-- Google Search Console -->
   <meta name="google-site-verification" content="dCZyvj3xZpC9xEk5Vx6x2wG8iLxZ3A2mNqP7yR5sT8U">
 
+  <!-- Schema Markup -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Course",
+        "name": "Puppy Raising: 0-12 Months",
+        "description": "From the first night to one year old. Grooming, basic obedience, behavioral solutions, and building correct foundations for a lifetime of good behavior.",
+        "provider": {
+          "@type": "Organization",
+          "name": "Canine Academy",
+          "sameAs": "https://dog-training.online/"
+        },
+        "url": "https://dog-training.online/courses/puppy.html",
+        "courseCode": "puppy-001",
+        "educationalLevel": "Beginner",
+        "teaches": ["Puppy socialization", "Basic obedience", "Potty training", "Leash walking", "Behavioral problem solving"],
+        "numberOfLessons": 16,
+        "timeRequired": "P8W",
+        "inLanguage": "en",
+        "offers": {
+          "@type": "Offer",
+          "price": "89.00",
+          "priceCurrency": "USD",
+          "availability": "https://schema.org/InStock"
+        },
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "4.8",
+          "reviewCount": "127"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://dog-training.online/"},
+          {"@type": "ListItem", "position": 2, "name": "Courses", "item": "https://dog-training.online/courses.html"},
+          {"@type": "ListItem", "position": 3, "name": "Puppy Raising", "item": "https://dog-training.online/courses/puppy.html"}
+        ]
+      }
+    ]
+  }
+  </script>
+
   <link rel="stylesheet" href="../assets/css/style.css">
   <style>
     .course-hero { min-height: 60vh; display: flex; align-items: center; padding: 10rem 2rem 4rem; background: linear-gradient(135deg, var(--black), var(--gray)); }
