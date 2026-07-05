@@ -1,2 +1,5 @@
 PROMOTION_PLAN.md
 SEO_US_STRATEGY.md
+node_modules/
+.wrangler/
+wrangler.toml
