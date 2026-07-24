@@ -1,0 +1,23 @@
+{
+  "site": "dog-training.online",
+  "last_updated": "2026-07-05T22:00:00+03:00",
+  "pages_total": 19,
+  "blog_posts": 7,
+  "courses": 6,
+  "status": {
+    "technical_fixes": "done",
+    "content_batch_1": "done",
+    "backlinks": "pending",
+    "gbp": "pending",
+    "medium": "pending",
+    "reddit": "pending"
+  },
+  "last_deploy": "2026-07-05T22:00:00+03:00",
+  "ga4_id": "G-DZ4LJV8T4J",
+  "gsc_id": "dCZyvj3xZpC9xEk5Vx6x2wG8iLxZ3A2mNqP7yR5sT8U",
+  "project_name": "dog-training-intl",
+  "repo_path": "/home/eyal/dog-training-intl",
+  "deploy_method": "wrangler",
+  "auto_deploy": false,
+  "skills_created": ["dog-training-deploy", "dog-training-content"]
+}
